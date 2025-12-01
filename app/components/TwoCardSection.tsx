@@ -31,7 +31,7 @@ const fadeUp: Variants = {
 
 export default function TwoCardSection() {
   return (
-    <section className="w-full py-40">
+    <section className="relative w-full py-40">
       {/* Section Intro */}
       <motion.div
         className="max-w-6xl mx-auto text-center mb-16"
@@ -90,10 +90,12 @@ export default function TwoCardSection() {
       </motion.div>
 
       {/* Glowing Divider */}
-      <motion.div
-        className="w-full h-px my-16 bg-gradient-to-r from-transparent via-gray-600/80 to-transparent"
-        variants={fadeUp}
-      />
+<motion.div
+  className="w-full h-px my-16 bg-gradient-to-r from-transparent via-gray-600/80 to-transparent"
+  variants={fadeUp}
+/>
+
+
     </section>
   );
 }

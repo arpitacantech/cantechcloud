@@ -114,11 +114,7 @@ For Developer
   </div>
 
 </motion.div>
-{/* Glowing Divider */}
-      <motion.div
-        className="w-full h-px my-16 bg-gradient-to-r from-transparent via-gray-600/80 to-transparent"
-        variants={fadeUp}
-      />
+
 
     </section>
   );
