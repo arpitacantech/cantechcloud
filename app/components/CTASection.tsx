@@ -1,6 +1,8 @@
 "use client";
 
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
+
 
 export default function CTASection() {
   // Box animation
@@ -33,30 +35,37 @@ export default function CTASection() {
     >
       {/* Box appears first */}
       <motion.div
-        className="relative w-[95%] md:w-[90%] rounded-[32px] pb-20 pt-16 px-6 text-center overflow-hidden"
-        style={{
-          background: `radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.08) 0%, rgba(0,0,0,1) 70%)`,
-        }}
-        variants={boxVariants}
-      >
+  className="relative w-[95%] md:w-[90%] rounded-[32px] pb-20 pt-16 px-6 text-center overflow-hidden"
+  variants={boxVariants}
+>
+
+  {/* Background Image */}
+  <Image
+    src="/cta-img.jpg"
+    alt="bg"
+    fill
+    className="object-cover z-[1]"
+  />
+ <div className="absolute inset-0 bg-black/70 z-[2]" />
+
         {/* Top Shadow Fade */}
         <div
-          className="absolute top-0 left-0 w-full h-40 pointer-events-none"
+          className="absolute top-0 left-0 w-full h-40 pointer-events-none z-[3]"
           style={{
             background:
               "radial-gradient(60% 40% at 50% 0%, rgba(255,255,255,0.4), transparent)",
           }}
         />
-
+<div className="relative z-[3]">
         {/* Title */}
         <motion.h1
           variants={zoomInVariants}
           className="text-[2.2rem] md:text-[3.5rem] lg:text-[3.5rem] font-bold leading-[3rem] md:leading-[4rem]"
         >
-          <span className="block bg-gradient-to-b from-white via-gray-300 to-black-100 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-b from-white via-gray-300 to-black-50 bg-clip-text text-transparent">
             Need Some
           </span>
-          <span className="block mt-5 bg-gradient-to-b from-white via-gray-300 to-black-100 bg-clip-text text-transparent">
+          <span className="block mt-5 bg-gradient-to-b from-white via-gray-300 to-black-50 bg-clip-text text-transparent">
             Professional Help?
           </span>
         </motion.h1>
@@ -64,7 +73,7 @@ export default function CTASection() {
         {/* Description */}
         <motion.p
           variants={zoomInVariants}
-          className="text-neutral-400 mt-6 text-lg max-w-4xl mx-auto"
+          className="text-neutral-300 mt-6 text-lg max-w-4xl mx-auto"
         >
           Contact our Customer Service representative to provide you with the best
           custom made solutions on the market, no matter whether you're a small
@@ -79,15 +88,16 @@ export default function CTASection() {
         >
           Let's Talk
         </motion.a>
-
+</div>
         {/* Bottom Shadow Fade */}
         <div
-          className="absolute bottom-0 left-0 w-full h-40 pointer-events-none"
+          className="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-[3]"
           style={{
             background:
               "radial-gradient(60% 40% at 50% 100%, rgba(255,255,255,0.4), transparent)",
           }}
         />
+        
       </motion.div>
     </motion.section>
   );
