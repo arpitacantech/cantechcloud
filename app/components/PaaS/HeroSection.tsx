@@ -14,7 +14,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
-        className="absolute top-0 left-0 w-full h-[70%] z-0 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-[60%] z-0 pointer-events-none"
       >
         <GradientDots
           duration={100}
