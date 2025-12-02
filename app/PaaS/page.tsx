@@ -1,7 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/paas/HeroSection";
-export default function paas() {
+export default function PaaS() {
   return (
   <main >
     <Navbar />
