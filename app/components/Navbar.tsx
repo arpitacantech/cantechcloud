@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* CENTER LINKS */}
         <ul className="flex-1 flex justify-center items-center space-x-10 font-medium text-white/80 whitespace-nowrap">
           <li><Link href="#" className="hover:text-white transition">Application</Link></li>
-          <li><Link href="#" className="hover:text-white transition">DataBase</Link></li>
+          <li><Link href="#" className="hover:text-white transition">Database</Link></li>
           <li><Link href="#" className="hover:text-white transition">Storage</Link></li>
           <li><Link href="#" className="hover:text-white transition">Pricing</Link></li>
         </ul>

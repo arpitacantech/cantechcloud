@@ -1,12 +1,13 @@
 
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
-
+import ReactLenis from "lenis/react";
 
 const lexend = Lexend({
   subsets: ["latin"],
-  weight: ["300","400","500","600","700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-lexend",
 });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.variable} antialiased`}>
-        {children}
+        {/* 👇 Smooth scrolling + required for GSAP ScrollTrigger */}
+        <ReactLenis root>
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );
