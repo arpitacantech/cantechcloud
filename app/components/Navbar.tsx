@@ -25,7 +25,8 @@ export default function Navbar() {
           rounded-full
           shadow-lg
           px-8
-          py-3
+          h-[55px]
+
           flex
           items-center
           transition-all duration-300 ease-out
@@ -54,24 +55,24 @@ export default function Navbar() {
 
         {/* RIGHT CTA */}
         <div className="flex-1 flex justify-end">
-          <Link
-            href="#"
-            className="
-              bg-black/70 
-              text-white 
-              font-medium 
-              rounded-full 
-              px-6 py-2 
-              flex items-center gap-2 
-              hover:shadow-[0_0_24px_rgba(255,255,255,1)] 
-              shadow-[0_0_12px_rgba(255,255,255,0.7)] 
-              transition 
-              whitespace-nowrap
-            "
-          >
-            Get Started →
-          </Link>
-        </div>
+  <Link
+    href="#"
+    className="
+      bg-black/70 
+      text-white 
+      font-medium 
+      rounded-full 
+      px-6 py-2 
+      flex items-center gap-2 
+      hover:[text-shadow:0_0_10px_rgba(255,255,255,1)]
+      transition 
+      whitespace-nowrap
+    "
+  >
+    Get Started →
+  </Link>
+</div>
+
       </div>
     </nav>
   );
