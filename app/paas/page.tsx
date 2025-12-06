@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection";
 import DifferentiationSection from "./components/DifferentiationSection";
 import ScrollCards from "./components/ScrollCards";
 import Integration from "./components/Integration";
-import { IconCloudDemo } from "./components/IconCloudDemo";
+
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 
@@ -18,7 +18,6 @@ export default function paas() {
   <DifferentiationSection />
   <ScrollCards />
   <Integration />
-  <IconCloudDemo />
   <CTASection />
   <Footer />
 
