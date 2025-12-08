@@ -7,8 +7,15 @@ interface FeatureCardProps {
 
 export default function Cards({ imageSrc, title, description, button }: FeatureCardProps) {
   return (
-    <div className="relative rounded-xl border border-transparent p-[1px] bg-gray-900 bg-origin-border overflow-hidden
-                transition-transform duration-300 hover:scale-[0.98] hover:shadow-inner">
+    <div className="relative  p-[1px] rounded-xl
+  bg-[linear-gradient(135deg,#0d0d0d,#050505)]
+  border border-white/10
+  shadow-[0_0_10px_rgba(0,0,0,0.5)]
+  backdrop-blur-xs
+ 
+  hover:border-white/20
+  hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] overflow-hidden
+                transition-transform duration-300 hover:scale-[0.98] ">
   
   {/* Inner content */}
   <div style={{ backgroundColor: "rgba(9, 9, 11)" }} className="rounded-xl p-6 flex flex-col items-center w-full h-full">
