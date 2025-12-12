@@ -88,23 +88,23 @@ function FAQ1() {
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
-  // Page load animation
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      setHasEntered(true);
-      return;
-    }
-    let timeout: ReturnType<typeof setTimeout>;
-    const onLoad = () => {
-      timeout = window.setTimeout(() => setHasEntered(true), 120);
-    };
-    if (document.readyState === "complete") onLoad();
-    else window.addEventListener("load", onLoad, { once: true });
-    return () => {
-      window.removeEventListener("load", onLoad);
-      clearTimeout(timeout);
-    };
-  }, []);
+//   // Page load animation
+//   useEffect(() => {
+//     if (typeof window === "undefined") {
+//       setHasEntered(true);
+//       return;
+//     }
+//     let timeout: ReturnType<typeof setTimeout>;
+//     const onLoad = () => {
+//       timeout = window.setTimeout(() => setHasEntered(true), 120);
+//     };
+//     if (document.readyState === "complete") onLoad();
+//     else window.addEventListener("load", onLoad, { once: true });
+//     return () => {
+//       window.removeEventListener("load", onLoad);
+//       clearTimeout(timeout);
+//     };
+//   }, []);
 
   // Toggle FAQ
   const toggleQuestion = (index: number) =>
