@@ -7,6 +7,7 @@ import Integration from "./components/Integration";
 
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import FAQ1 from "../components/FAQ1";
 
 
 
@@ -18,6 +19,7 @@ export default function paas() {
   <DifferentiationSection />
   <ScrollCards />
   <Integration />
+  <FAQ1 />
   <CTASection />
   <Footer />
 

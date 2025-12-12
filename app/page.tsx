@@ -6,6 +6,7 @@ import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import FeaturesSection from "./components/FeaturesSection";
 import ComparisonSection from "./application/components/ComparisonSection";
+import FAQ1 from "./components/FAQ1";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     {/* <ServicesSection /> */}
     <FeaturesSection />
     <ComparisonSection />
+    <FAQ1 />
     <CTASection />
     <Footer />
     

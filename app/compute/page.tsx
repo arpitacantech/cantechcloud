@@ -5,6 +5,7 @@ import TextParallaxContentExample from "./components/text-parallax-content-scrol
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import ComparisonSection from "../application/components/ComparisonSection";
+import FAQ1 from "../components/FAQ1";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
     <DifferentiationSection />
     <TextParallaxContentExample />
     <ComparisonSection />
+    <FAQ1 />
     <CTASection />
     <Footer />
   

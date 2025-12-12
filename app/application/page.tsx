@@ -6,6 +6,7 @@ import ComparisonSection from "./components/ComparisonSection";
 // import ComparisonSection2 from "./components/ComparisonSection2";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import FAQ1 from "../components/FAQ1";
 
 export default function paas() {
   return (
@@ -17,6 +18,7 @@ export default function paas() {
   <DifferentiationSection />
   <ComparisonSection />
   {/* <ComparisonSection2 /> */}
+  <FAQ1 />
   <CTASection />
   <Footer />
  
