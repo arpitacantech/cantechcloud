@@ -88,7 +88,7 @@ export default function ApplicationSection() {
     <section className="py-20 bg-black text-white mt-10">
       {/* Section Intro */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <p className="inline-block border border-gray-500 text-gray-500 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide">
+        <p className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide">
           Applications
         </p>
 

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import ApplicationSection from "./components/ApplicationSection";
 import DifferentiationSection from "../paas/components/DifferentiationSection";
 import ComparisonSection from "./components/ComparisonSection";
-import ComparisonSection2 from "./components/ComparisonSection2";
+// import ComparisonSection2 from "./components/ComparisonSection2";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 
@@ -16,7 +16,7 @@ export default function paas() {
   <ApplicationSection />
   <DifferentiationSection />
   <ComparisonSection />
-  <ComparisonSection2 />
+  {/* <ComparisonSection2 /> */}
   <CTASection />
   <Footer />
  

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { GradientDots } from "../../components/ui/gradient-dots";
 import ClientLogos from "../../components/Clients";
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
 import { ShaderAnimation } from "@/app/components/ui/shader-animation";

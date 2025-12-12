@@ -49,13 +49,13 @@ export default function CTASection() {
  <div className="absolute inset-0 bg-black/70 z-[2]" />
 
         {/* Top Shadow Fade */}
-        <div
+        {/* <div
           className="absolute top-0 left-0 w-full h-40 pointer-events-none z-[3]"
           style={{
             background:
-              "radial-gradient(60% 40% at 50% 0%, rgba(255,255,255,0.4), transparent)",
+              "radial-gradient(60% 40% at 50% 0%, rgba(255,255,255,0.2), transparent)",
           }}
-        />
+        /> */}
 <div className="relative z-[3]">
         {/* Title */}
         <motion.h1
@@ -90,13 +90,13 @@ export default function CTASection() {
         </motion.a>
 </div>
         {/* Bottom Shadow Fade */}
-        <div
+        {/* <div
           className="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-[3]"
           style={{
             background:
-              "radial-gradient(60% 40% at 50% 100%, rgba(255,255,255,0.4), transparent)",
+              "radial-gradient(60% 40% at 50% 100%, rgba(255,255,255,0.2), transparent)",
           }}
-        />
+        /> */}
         
       </motion.div>
     </motion.section>

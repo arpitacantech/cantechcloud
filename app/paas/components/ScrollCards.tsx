@@ -74,7 +74,7 @@ export default function ScrollCards() {
             viewport={{ once: true }}
             variants={badgeVariants}
           >
-            <p className="inline-block border border-gray-500 text-gray-400 uppercase text-xs md:text-sm px-3 py-1 rounded-full tracking-wide">
+            <p className="inline-block border border-gray-300 text-gray-300 uppercase text-xs md:text-sm px-3 py-1 rounded-full tracking-wide">
               Feature
             </p>
           </motion.div>

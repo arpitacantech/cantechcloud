@@ -18,10 +18,12 @@ const fadeUp = {
 };
 
 const bars = [
-  { title: "AWS", height: 300 }, 
-  { title: "Cantech Cloud", height: 450, highlighted: true }, 
-  { title: "Google Cloud", height: 300 },
+  { title: "Cantech Cloud", height: 200, highlighted: true },
+  { title: "AWS", height: 260 },
+  { title: "Azure", height: 320 },
+  { title: "Google Cloud", height: 380 },
 ];
+
 
 const ComparisonSection: React.FC = () => {
   return (
@@ -35,7 +37,7 @@ const ComparisonSection: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p
-          className="inline-block border border-gray-500 text-gray-500 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
+          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
           variants={fadeUp}
         >
           comparison
@@ -58,12 +60,13 @@ const ComparisonSection: React.FC = () => {
 
       {/* BIG Bars */}
       <motion.div
-        className="flex justify-center items-end gap-16 max-w-6xl mx-auto"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+  className="flex flex-wrap justify-center items-end gap-16 max-w-6xl mx-auto"
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.3 }}
+>
+
         {bars.map((bar, index) => (
           <motion.div
             key={index}
@@ -71,15 +74,15 @@ const ComparisonSection: React.FC = () => {
             className="flex flex-col items-center"
           >
             <div
-  className={`
-    w-40 md:w-60 rounded-t-3xl transition-all duration-500
-    border border-white/10
-    bg-[linear-gradient(135deg,#0d0d0d,#050505)]
-    shadow-[0_0_10px_rgba(0,0,0,0.5)]
-    ${bar.highlighted ? "shadow-[0_0_25px_rgba(255,255,255,0.4)] border-white/40 scale-[1.05]" : ""}
-  `}
-  style={{ height: `${bar.height}px` }}
-/>
+              className={`
+                w-40 md:w-60 rounded-t-3xl transition-all duration-500
+                border border-white/10
+                bg-[linear-gradient(135deg,#0d0d0d,#050505)]
+                shadow-[0_0_10px_rgba(0,0,0,0.5)]
+                ${bar.highlighted ? "shadow-[0_0_25px_rgba(255,255,255,0.4)] border-white/40 scale-[1.05]" : ""}
+              `}
+              style={{ height: `${bar.height}px` }}
+            />
 
             <h3 className="text-gray-200 font-semibold mt-6 text-2xl">
               {bar.title}

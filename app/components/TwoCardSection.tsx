@@ -41,7 +41,7 @@ export default function TwoCardSection() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p
-          className="inline-block border border-gray-500 text-gray-500 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
+          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
           variants={fadeUp}
         >
           Services

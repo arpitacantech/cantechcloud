@@ -15,9 +15,10 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "types": [
-      "@react-three/fiber"
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
     ],
     "incremental": true,
     "plugins": [
@@ -35,11 +36,13 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "types/**/*.d.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "next.config.js"
-, "app/paas/components/Card.jsx"  ],
+    "next.config.js",
+     "app/compute/components/Card.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]

@@ -67,7 +67,7 @@ export default function FeatureSection({ className }: { className?: string }) {
     <section className={cn("mx-auto max-w-7xl px-4 md:px-8 -mt-24", className)}>
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <p className="inline-block border border-gray-500 text-gray-500 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide">
+        <p className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide">
           Features
         </p>
         <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-4">
