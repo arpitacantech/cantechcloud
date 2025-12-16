@@ -28,10 +28,24 @@ const fadeUp: Variants = {
     transition: { duration: 0.6, ease: easeOut },
   },
 };
-
+const palette = {
+  surface: "bg-neutral-950 text-neutral-100",
+  panel: "bg-neutral-900/50",
+  border: "border-white/10",
+  heading: "text-white",
+  muted: "text-neutral-400",
+  iconRing: "border-white/20",
+  iconSurface: "bg-white/5",
+  icon: "text-white",
+  glow: "rgba(255, 255, 255, 0.08)",
+  aurora: "radial-gradient(ellipse 50% 100% at 10% 0%, rgba(226, 232, 240, 0.15), transparent 65%), #000000",
+  shadow: "shadow-[0_36px_140px_-60px_rgba(10,10,10,0.95)]",
+  overlay: "linear-gradient(130deg, rgba(255,255,255,0.04) 0%, transparent 65%)",
+};
 export default function TwoCardSection() {
   return (
     <section className="relative w-full py-40">
+      
       {/* Section Intro */}
       <motion.div
         className="max-w-6xl mx-auto text-center mb-16"

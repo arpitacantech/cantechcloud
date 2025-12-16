@@ -8,25 +8,25 @@ const faqs = [
     question: "Where is Cantech based?",
     answer:
       "Cantech is based in India, with well-placed data centers around the world. These facilities are capable of offering exceptional hosting support to businesses around the world. We have a sizable network and infrastructure that ensures that services are reliable for the majority of the locations. We ensure the delivery of the best service for our clients in different regions with its global reach.",
-    // meta: "Discovery",
+  
   },
   {
     question: "How is Cantech's technical support?",
     answer:
       "Cantech offers 24x7, 365 days professional support and skilled technical assistance to fix your problem. We communicate over email, phone and live chat so we can connect with you anytime. So we are specialized in providing quick, rich and customized solutions for your hosting needs. You are committed to keep your server functioning and reliability is our focus. You can rest easy because our help is always there through just a phone call or click away.",
-    // meta: "Collaboration",
+ 
   },
   {
     question: "What hosting plans are available at Cantech?",
     answer:
       "Cantech offers a variety of hosting plans to cater to your business needs. We have options such as Shared Hosting for entry-level users, VPS Hosting for scalable growth, and Dedicated Servers for extreme performance demands. ",
-    // meta: "Systems",
+  
   },
   {
     question: "How safe is Cantech's server?",
     answer:
       "Cantech's servers have been tuned for protection against damages and built with advanced security protection for your data and applications.",
-    // meta: "Quality",
+ 
   },
 ];
 

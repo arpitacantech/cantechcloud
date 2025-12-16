@@ -41,7 +41,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "next.config.js",
-     "app/compute/components/Card.jsx"
+    "app/compute/components/Card.jsx"
   ],
   "exclude": [
     "node_modules"
