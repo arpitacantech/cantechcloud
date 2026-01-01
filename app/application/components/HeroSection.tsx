@@ -98,7 +98,7 @@ const Hero = React.memo(() => {
       <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gauge-icon lucide-gauge"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>High-Performance
     </span></div>
 
-    <h1 className="text-white text-center"><span>Best Platform for Application</span><span className="block mt-[7px]">Hosting on PaaS</span></h1>
+    <h1 className="text-white text-center z-10 mt-10"><span>Best Platform for Application</span><span className="block mt-[7px]">Hosting on PaaS</span></h1>
     <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Simple Setup, Instant Scaling, Managed Security, Expert Support.</p>
 
       <div className="w-full max-w-5xl relative ">
