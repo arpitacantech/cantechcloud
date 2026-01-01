@@ -1,11 +1,36 @@
 "use client";
 import HomePage from "./hero-bg";
+import { useEffect, useRef } from "react";
+const Hero = React.memo(() => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // 🔥 slower video
+    }
+  }, []);
+
 
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-black overflow-hidden pt-40 pb-40 min-h-[100vh]">
       <div className="absolute inset-0 z-0 h-full">
-        <HomePage />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+  <video
+    className="h-full w-full object-cover grayscale scale-[1.35]"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src="/assets/hero-video.mp4" type="video/mp4" />
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
+</div>
+
       </div>
 
       <div className="relative z-10 text-center px-4 pt-10"> 
