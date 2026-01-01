@@ -1,6 +1,67 @@
 "use client";
-import HomePage from "./hero-bg";
+import React from "react";
 import { useEffect, useRef } from "react";
+
+// Inline Button Component
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "secondary" | "ghost" | "gradient";
+  size?: "default" | "sm" | "lg";
+  children: React.ReactNode;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = "default", size = "default", className = "", children, ...props }, ref) => {
+    const baseStyles =
+      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+
+    const variants = {
+      default: "bg-white text-black hover:bg-gray-100",
+      secondary: "bg-gray-800 text-white hover:bg-gray-700",
+      ghost: "hover:bg-gray-800/50 text-white",
+      gradient:
+        "bg-gradient-to-b from-white via-white/95 to-white/60 text-black hover:scale-105 active:scale-95",
+    };
+
+    const sizes = {
+      default: "h-10 px-4 py-2 text-sm",
+      sm: "h-10 px-5 text-sm",
+      lg: "h-12 px-8 text-base",
+    };
+
+    return (
+      <button
+        ref={ref}
+        className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+// Icon
+const ArrowRight = ({ className = "", size = 16 }: { className?: string; size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M5 12h14" />
+    <path d="m12 5 7 7-7 7" />
+  </svg>
+);
+
+// Hero Component
 const Hero = React.memo(() => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -10,13 +71,17 @@ const Hero = React.memo(() => {
     }
   }, []);
 
-
-export default function HeroSection() {
+  
   return (
-    <section className="relative w-full bg-black overflow-hidden pt-40 pb-40 min-h-[100vh]">
-      <div className="absolute inset-0 z-0 h-full">
-        <div className="absolute inset-0 z-0 overflow-hidden">
+    <section
+      className="relative flex flex-col items-center px-6 pt-32 md:pt-40 pb-24"
+
+      style={{ animation: "fadeIn 0.6s ease-out" }}
+    >
+{/* Top Background Video (bleeds into dashboard) */}
+<div className="absolute top-0 left-0 w-full h-[85vh] md:h-[95vh] z-0 overflow-hidden">
   <video
+    ref={videoRef}
     className="h-full w-full object-cover grayscale scale-[1.35]"
     autoPlay
     loop
@@ -24,67 +89,41 @@ export default function HeroSection() {
     playsInline
     preload="auto"
   >
-    <source src="/assets/hero-video.mp4" type="video/mp4" />
+    <source src="/hero-video1.mp4" type="video/mp4" />
   </video>
 
-  {/* Overlay */}
   <div className="absolute inset-0 bg-black/60" />
 </div>
 
+      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gauge-icon lucide-gauge"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>High-Performance
+    </span></div>
+
+    <h1 className="cc-h1 text-center"><span>Best Platform for Application</span><span className="block mt-[7px]">Hosting on PaaS</span></h1>
+    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Simple Setup, Instant Scaling, Managed Security, Expert Support.</p>
+
+      <div className="flex items-center gap-4 relative z-10 mb-16">
+        <a href="#" className="button"><span>Get Started</span></a>
       </div>
 
-      <div className="relative z-10 text-center px-4 pt-10"> 
-  <h1
-    className="text-5xl md:text-7xl font-semibold mb-10 
-    bg-gradient-to-r from-white to-gray-700 
-    bg-clip-text text-transparent">
-    Deploy Cloud Apps With
-    <span className="block mt-6"> Confidence and Scale</span>
-  </h1>
-
-  {/* <p className="text-lg md:text-2xl text-gray-500 mb-10">
-    One platform for all your cloud applications. Simple, secure, and infinitely scalable
-  </p> */}
-
-  <div className="flex flex-wrap justify-center gap-10 text-gray-300 text-xl">
-  <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-  </span>
-
-  <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-  </span>
-
-  <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-  </span>
-
-  <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-  </span>
-</div>
-
-
-<div className="mt-24 flex justify-center gap-6">
-  <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg 
-               transition shadow-none 
-               hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] 
-               hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Explore More
-  </button>
-
-  <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg 
-               transition shadow-none 
-               hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] 
-               hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Get Started
-  </button>
-</div>
-
-</div>
-
+      <div className="w-full max-w-5xl relative ">
+        <div className="relative z-10">
+          <img
+            src="https://i.postimg.cc/SKcdVTr1/Dashboard2.png"
+            alt="Dashboard preview"
+            className="w-full h-auto rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
     </section>
   );
+});
+
+Hero.displayName = "Hero";
+
+// Main Component
+export default function Component() {
+  return (
+    <Hero />
+  );
 }
+
